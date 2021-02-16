@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from 'react'
+import ErrorMessage from '../components/ErrorMessage'
 import Book from '../models/book'
 import getBooks from '../services/getBooks'
 
@@ -20,9 +21,7 @@ const HomePage: FunctionComponent = () => {
     }, [])
 
     if (error) {
-        return <div>
-            Error: {error.message}
-        </div>
+        return <ErrorMessage message='Failed to load list of books!' />
     }
 
     return <div>
