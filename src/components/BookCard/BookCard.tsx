@@ -7,14 +7,18 @@ interface Props {
 }
 
 const BookCard: FunctionComponent<Props> = ({ book }) => {
-    return <S.BookCard>
-        <S.Image link={book.cover} />
-        <S.Content>
-            <S.Title>{book.title}</S.Title>
-            <S.Author>{book.author}</S.Author>
-        </S.Content>
-        <S.SeeMore>See More Details</S.SeeMore>
-    </S.BookCard>
+
+
+    return <S.Link to={`/books/${book.id}`}>
+        <S.BookCard>
+            <S.Image link={book.cover} />
+            <S.Content>
+                <S.Title>{book.title}</S.Title>
+                <S.Author>{book.author}</S.Author>
+            </S.Content>
+            <S.SeeMore>See More Details</S.SeeMore>
+        </S.BookCard>
+    </S.Link>
 }
 
 export default BookCard

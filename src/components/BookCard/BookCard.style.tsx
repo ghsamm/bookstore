@@ -1,4 +1,10 @@
+import { Link as ReactRouterLink } from 'react-router-dom'
 import styled from 'styled-components'
+
+export const Link = styled(ReactRouterLink)`
+    color: inherit;
+    text-decoration: none;
+`
 
 interface ImageProps {
     link: string
