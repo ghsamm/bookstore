@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from 'react'
+import BookCardList from '../components/BookCardList'
 import ErrorMessage from '../components/ErrorMessage'
 import Book from '../models/book'
 import getBooks from '../services/getBooks'
@@ -25,9 +26,7 @@ const HomePage: FunctionComponent = () => {
     }
 
     return <div>
-        <pre>
-            {JSON.stringify(books, null, 2)}
-        </pre>
+        <BookCardList books={books} />
     </div>
 }
 
