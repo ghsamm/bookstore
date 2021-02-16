@@ -1,0 +1,1 @@
+export const API_URL = 'https://raw.githubusercontent.com/sing2gather/impala-exercise/main/data.json'
