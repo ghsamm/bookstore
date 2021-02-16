@@ -12,8 +12,8 @@ const BookCard: FunctionComponent<Props> = ({ book }) => {
         <S.Content>
             <S.Title>{book.title}</S.Title>
             <S.Author>{book.author}</S.Author>
-            <div></div>
         </S.Content>
+        <S.SeeMore>See More Details</S.SeeMore>
     </S.BookCard>
 }
 
