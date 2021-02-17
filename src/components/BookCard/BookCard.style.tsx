@@ -54,10 +54,9 @@ export const SeeMore = styled.div.attrs({ className: 'see-more' })`
 `
 
 export const BookCard = styled.div`
-    border: 2px solid black;
-    background-color: black;
     color: white;
     border-radius: 4px;
+    box-shadow: 0px 0px 0px 2px black;
     overflow: hidden;
     aspect-ratio: 2 / 3;
     max-width: 300px;
