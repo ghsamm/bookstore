@@ -1,27 +1,21 @@
-import React, { FunctionComponent, useEffect, useState } from 'react'
+import React, { FunctionComponent } from 'react'
 import BookCardList from '../components/BookCardList'
 import ErrorMessage from '../components/ErrorMessage'
-import Book from '../models/book'
+import useRequest from '../hooks/useRequest'
 import getBooks from '../services/getBooks'
 
+
+
+
+
 const HomePage: FunctionComponent = () => {
-    const [books, setBooks] = useState<Book[]>([])
-    const [error, setError] = useState<Error | null>(null)
+    const { data: books, isLoading, error } = useRequest(getBooks)
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const newBooks = await getBooks()
-                setBooks(newBooks)
-            } catch (err: unknown) {
-                if (err instanceof Error) {
-                    setError(err)
-                }
-            }
-        })()
-    }, [])
+    if (isLoading) {
+        return <div>Loading...</div>
+    }
 
-    if (error) {
+    if (error || !books) {
         return <ErrorMessage message='Failed to load list of books!' />
     }
 
