@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { useParams } from 'react-router-dom'
 import ErrorMessage from '../components/ErrorMessage'
+import LoadingSpinner from '../components/LoadingSpinner'
 import useRequest from '../hooks/useRequest'
 import getBook from '../services/getBook'
 
@@ -14,7 +15,7 @@ const BookDetailsPage: FunctionComponent = () => {
 
 
     if (isLoading) {
-        return <div>Loading...</div>
+        return <LoadingSpinner />
     }
 
     if (error || !book) {

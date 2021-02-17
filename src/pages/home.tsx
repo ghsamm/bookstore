@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import BookCardList from '../components/BookCardList'
 import ErrorMessage from '../components/ErrorMessage'
+import LoadingSpinner from '../components/LoadingSpinner'
 import useRequest from '../hooks/useRequest'
 import getBooks from '../services/getBooks'
 
@@ -12,7 +13,7 @@ const HomePage: FunctionComponent = () => {
     const { data: books, isLoading, error } = useRequest(getBooks)
 
     if (isLoading) {
-        return <div>Loading...</div>
+        return <LoadingSpinner />
     }
 
     if (error || !books) {
