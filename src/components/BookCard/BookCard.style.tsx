@@ -1,20 +1,15 @@
 import { Link as ReactRouterLink } from 'react-router-dom'
 import styled from 'styled-components'
+import BaseImage from '../BaseImage'
 
 export const Link = styled(ReactRouterLink)`
     color: inherit;
     text-decoration: none;
 `
 
-interface ImageProps {
-    link: string
-}
 
-export const Image = styled.div<ImageProps>`
-    background-image: url(${props => props.link});
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+export const Image = styled(BaseImage)`
     flex: 1;
 `
 
