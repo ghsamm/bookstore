@@ -1,5 +1,6 @@
 import { Link as ReactRouterLink } from 'react-router-dom'
 import styled from 'styled-components'
+import BaseCard from '../BaseCard'
 import BaseImage from '../BaseImage'
 
 export const Link = styled(ReactRouterLink)`
@@ -48,11 +49,8 @@ export const SeeMore = styled.div.attrs({ className: 'see-more' })`
     transition: opacity 200ms ease-in-out;
 `
 
-export const BookCard = styled.div`
+export const BookCard = styled(BaseCard)`
     color: white;
-    border-radius: 4px;
-    box-shadow: 0px 0px 0px 2px black;
-    overflow: hidden;
     aspect-ratio: 2 / 3;
     max-width: 300px;
     min-height: 250px;
