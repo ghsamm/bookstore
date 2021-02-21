@@ -8,7 +8,9 @@ import fromTheme from './style/fromTheme';
 const S = {
   App: styled.div`
     font-size: 14px;
-    color: ${fromTheme(t => t.colors.text)}
+    color: ${fromTheme(t => t.colors.text)};
+    max-width: 800px;
+    margin: auto;
   `
 }
 
