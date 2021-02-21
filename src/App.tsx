@@ -3,10 +3,12 @@ import { Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import BookDetailsPage from './pages/book-details';
 import HomePage from './pages/home';
+import fromTheme from './style/fromTheme';
 
 const S = {
   App: styled.div`
     font-size: 14px;
+    color: ${fromTheme(t => t.colors.text)}
   `
 }
 

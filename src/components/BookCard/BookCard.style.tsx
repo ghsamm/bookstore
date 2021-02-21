@@ -1,5 +1,6 @@
 import { Link as ReactRouterLink } from 'react-router-dom'
 import styled from 'styled-components'
+import fromTheme from '../../style/fromTheme'
 import BaseCard from '../BaseCard'
 import BaseImage from '../BaseImage'
 
@@ -16,7 +17,7 @@ export const Image = styled(BaseImage)`
 
 export const Content = styled.div`
     padding: 5px;
-    background-color: black;
+    background-color: ${fromTheme(t => t.colors.main)};
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -50,7 +51,7 @@ export const SeeMore = styled.div.attrs({ className: 'see-more' })`
 `
 
 export const BookCard = styled(BaseCard)`
-    color: white;
+    color: ${fromTheme(t => t.colors.textInverted)};
     aspect-ratio: 2 / 3;
     max-width: 300px;
     min-height: 250px;

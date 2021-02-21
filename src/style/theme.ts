@@ -1,6 +1,11 @@
 const theme = {
     colors: {
-        error: '#e36060'
+        main: 'black',
+        secondary: 'grey',
+        error: '#e36060',
+        text: 'black',
+        textInverted: 'white',
+        label: 'grey'
     }
 }
 

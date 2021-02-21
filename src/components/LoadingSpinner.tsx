@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
+import fromTheme from '../style/fromTheme'
 
 const S = {
     Container: styled.div`
@@ -16,7 +17,7 @@ const S = {
             width: 13px;
             height: 13px;
             border-radius: 50%;
-            background: black;
+            background: ${fromTheme(t => t.colors.main)};
             animation-timing-function: cubic-bezier(0, 1, 1, 0);
         }
         div:nth-child(1) {
