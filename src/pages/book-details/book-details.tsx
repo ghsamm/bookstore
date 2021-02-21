@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { ArrowBack } from '@styled-icons/material/ArrowBack'
 
@@ -17,7 +17,11 @@ interface Params {
 
 const BookDetailsPage: FunctionComponent = () => {
     const { id } = useParams<Params>()
-    const { data: book, isLoading, error } = useRequest(() => getBook(id))
+    const { data: book, isLoading, error, refetch } = useRequest(() => getBook(id))
+
+    useEffect(() => {
+        refetch()
+    }, [id])
 
     if (isLoading) {
         return <LoadingSpinner />
