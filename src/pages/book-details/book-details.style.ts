@@ -33,7 +33,11 @@ export const Card = styled(BaseCard)`
 
 export const Image = BaseImage
 
-export const Content = styled.div``
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+`
 
 export const Title = styled.h2``
 

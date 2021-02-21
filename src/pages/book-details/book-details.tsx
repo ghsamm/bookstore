@@ -9,6 +9,7 @@ import LoadingSpinner from '../../components/LoadingSpinner'
 import useRequest from '../../hooks/useRequest'
 import getBook from '../../services/getBook'
 import * as S from './book-details.style'
+import SimilarBooks from '../../components/SimilarBooks'
 
 interface Params {
     id: string
@@ -17,7 +18,6 @@ interface Params {
 const BookDetailsPage: FunctionComponent = () => {
     const { id } = useParams<Params>()
     const { data: book, isLoading, error } = useRequest(() => getBook(id))
-
 
     if (isLoading) {
         return <LoadingSpinner />
@@ -45,6 +45,7 @@ const BookDetailsPage: FunctionComponent = () => {
                     <Detail label='Written by' content={book.author} />
                     <Detail label='ISBN' content={book.isbn} />
                 </S.Details>
+                <SimilarBooks bookId={book.id} />
             </S.Content>
         </S.Container>
     </S.BookDetailsPage>
