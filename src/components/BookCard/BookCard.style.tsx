@@ -1,15 +1,7 @@
-import { Link as ReactRouterLink } from 'react-router-dom'
 import styled from 'styled-components'
 import fromTheme from '../../style/fromTheme'
 import BaseCard from '../BaseCard'
 import BaseImage from '../BaseImage'
-
-export const Link = styled(ReactRouterLink)`
-    color: inherit;
-    text-decoration: none;
-`
-
-
 
 export const Image = styled(BaseImage)`
     flex: 1;

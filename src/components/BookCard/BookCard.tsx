@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import Book from '../../models/book'
+import Link from '../Link'
 import * as S from './BookCard.style'
 
 interface Props {
@@ -9,7 +10,7 @@ interface Props {
 const BookCard: FunctionComponent<Props> = ({ book }) => {
 
 
-    return <S.Link to={`/books/${book.id}`}>
+    return <Link to={`/books/${book.id}`}>
         <S.BookCard>
             <S.Image link={book.cover} />
             <S.Content>
@@ -18,7 +19,7 @@ const BookCard: FunctionComponent<Props> = ({ book }) => {
             </S.Content>
             <S.SeeMore>See More Details</S.SeeMore>
         </S.BookCard>
-    </S.Link>
+    </Link>
 }
 
 export default BookCard
