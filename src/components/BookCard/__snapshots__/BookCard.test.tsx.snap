@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<a
+  className="sc-bdfBwQ eDrhPS"
+  href="/books/97978"
+  onClick={[Function]}
+>
+  <div
+    className="sc-gsTCUz sc-fubCfw bVmNIK hRzoSX"
+  >
+    <div
+      className="sc-dlfnbm sc-hKgILt vRUoF bgpyTi"
+    />
+    <div
+      className="sc-eCssSg fcoeFO"
+    >
+      <div
+        className="sc-jSgupP kAcVGk"
+      >
+        Book of the year
+      </div>
+      <div
+        className="sc-gKsewC jJKSsS"
+      >
+        Some one
+      </div>
+    </div>
+    <div
+      className="sc-iBPRYJ eKLUSM see-more"
+    >
+      See More Details
+    </div>
+  </div>
+</a>
+`;
